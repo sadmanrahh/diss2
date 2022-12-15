@@ -1,7 +1,7 @@
 
 :root{
-  --btn-color:#e58f00;
-  --about-sec:#1d1d23;
+  --btn-color:#fff;
+  --about-sec:#5eccd6;
 }
 *{
   padding: 0;
@@ -26,7 +26,7 @@ html{
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  background: black;
+  background: 5eccd6;
 }
 .logo img{
   width: 100px;
@@ -341,7 +341,7 @@ html{
 }
 
 .footer{
-  background: #1d1d23;
+  background: #5eccd6;
   padding: 6rem 10rem;
   display: flex;
   justify-content: center;
