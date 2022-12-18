@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { NgModule } from '@angular/core';
-
+import { AdminpageComponent } from './features/auth/pages/adminpage/adminpage.component';
 const routes: Routes = [
   {
     path: '',
@@ -15,6 +15,12 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
+  {
+    path:'adminpage',
+    component :AdminpageComponent
+    
+  },
+  
   {
     path: '**',
     redirectTo: '',

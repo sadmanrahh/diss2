@@ -1,17 +1,20 @@
-
 <div class="background">
-    <div class="login-container">
-      <div class="text-container">
-        <h1>LetsNotWaste</h1>
-        <p>
-          Want to collect free food and reduce food waste simultaniously? Start by clicking here!
-        </p>
-        <button mat-button routerLink="/register">Sign up</button>
-      </div>
-      <div class="form-container">
-        <h1>Welcome to Lets Not Waste</h1>
-        <h5>Sign in with your email</h5>
-        <ngbytes-login-form (formData)="login($event)"></ngbytes-login-form>
-      </div>
+  <div class="login-container">
+    <div class="text-container">
+      <h1>Welcome</h1>
+      <p>
+        Enter this awesome app to get super cheap or even free food
+        by just logging in with your google account!
+      </p>
+      <button class="mat-raised-button" (click)="loginWithGoogle()">
+        Customer Login
+      </button>
+    </div>
+    <div class="form-container">
+      <h1>Lets Not Waste</h1>
+      
+      <h5>Login As Shop Manager</h5>
+      <ngbytes-login-form (formData)="login($event)"></ngbytes-login-form>
     </div>
   </div>
+</div>

@@ -20,6 +20,13 @@ export class LoginPageComponent implements OnInit {
   login(loginData: LoginData) {
     this.authService
       .login(loginData)
+      .then(() => this.router.navigate(['/adminpage']))
+      .catch((e) => console.log(e.message));
+  }
+
+  loginWithGoogle() {
+    this.authService
+      .loginWithGoogle()
       .then(() => this.router.navigate(['/dashboard']))
       .catch((e) => console.log(e.message));
   }
