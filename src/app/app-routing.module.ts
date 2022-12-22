@@ -25,6 +25,10 @@ const routes: Routes = [
     component :AdminpageComponent
     
   },
+  { 
+    path: 'user', 
+  loadChildren: () => 
+  import('./features/user/user.module').then(m => m.UserModule) },
   
   {
     path: '**',
