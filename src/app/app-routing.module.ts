@@ -16,6 +16,11 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'order',
+    loadChildren: () =>
+      import('./features/pokemon/pokemon.module').then((m) => m.PokemonModule),
+  },
+  {
     path:'adminpage',
     component :AdminpageComponent
     
