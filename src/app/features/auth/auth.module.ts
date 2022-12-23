@@ -8,9 +8,12 @@ import { MatInputModule } from '@angular/material/input';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminpageComponent } from './pages/adminpage/adminpage.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
+import { UsageComponent } from './pages/usage/usage.component';
 
 @NgModule({
-  declarations: [LoginPageComponent, LoginFormComponent, AdminpageComponent],
+  declarations: [LoginPageComponent, LoginFormComponent, AdminpageComponent, ContactComponent, AboutComponent, UsageComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,

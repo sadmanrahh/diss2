@@ -1,15 +1,19 @@
 
+<a href="/adminpage" class="button">Dashboard</a>
+
 <div class="container">
     <div class="header">
-      <img src="assets/NgPokedex.png" />
+      <img src="assets/reminder.png" />
     </div>
     <div class="content">
       <div class="list">
         <div class="list-header">
           <h3>List of Available Items</h3>
+         
           <button mat-raised-button color="primary" (click)="addPokemon()">
             Add Items
           </button>
+        
         </div>
         <app-list
           [pokemon$]="allPokemon$"

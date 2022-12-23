@@ -96,6 +96,7 @@ html{
 .home-inner-content{
   flex: 1 1 45rem;
 }
+
 .home-image{
   width: 60%;
   height: 60%;
@@ -147,6 +148,21 @@ html{
   padding: 2rem 7%;
   background: var(--about-sec);
 }
+
+.belownav{
+  background-color: #fff;
+  padding: 2rem 0;
+}
+.belownav{
+  width: 100%;
+ 
+}
+.belownav img{
+
+  width: 100%;
+  object-fit: cover;
+}
+
 .main-about{
   display: flex;
   justify-content: center;

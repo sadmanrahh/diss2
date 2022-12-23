@@ -2,6 +2,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { NgModule } from '@angular/core';
 import { AdminpageComponent } from './features/auth/pages/adminpage/adminpage.component';
+import { ContactComponent } from './features/auth/pages/contact/contact.component';
+import { AboutComponent } from './features/auth/pages/about/about.component';
+import { UsageComponent } from './features/auth/pages/usage/usage.component';
 const routes: Routes = [
   {
     path: '',
@@ -30,6 +33,24 @@ const routes: Routes = [
   loadChildren: () => 
   import('./features/user/user.module').then(m => m.UserModule) },
   
+  {
+    path:'contact',
+    component :ContactComponent
+    
+  },
+
+  {
+    path:'about',
+    component :AboutComponent
+    
+  },
+  
+  {
+    path:'usage',
+    component :UsageComponent
+
+  },
+
   {
     path: '**',
     redirectTo: '',
