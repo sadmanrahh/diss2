@@ -635,3 +635,28 @@ html{
      
   }
 }
+
+
+
+
+
+.steps{
+  background-color: #fff;
+  padding: 2rem 0;
+}
+.steps{
+  width: 100%;
+ 
+}
+.steps img{
+
+  width: 100%;
+  object-fit: cover;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid #5eccd6;
+  padding: 10px;
+}

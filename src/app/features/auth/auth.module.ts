@@ -11,9 +11,13 @@ import { AdminpageComponent } from './pages/adminpage/adminpage.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { UsageComponent } from './pages/usage/usage.component';
+import { UsageadminComponent } from './pages/usageadmin/usageadmin.component';
+import { ContactadminComponent } from './pages/contactadmin/contactadmin.component';
+import { BecomeadminComponent } from './pages/becomeadmin/becomeadmin.component';
+import { AboutadminComponent } from './pages/aboutadmin/aboutadmin.component';
 
 @NgModule({
-  declarations: [LoginPageComponent, LoginFormComponent, AdminpageComponent, ContactComponent, AboutComponent, UsageComponent],
+  declarations: [LoginPageComponent, LoginFormComponent, AdminpageComponent, ContactComponent, AboutComponent, UsageComponent, UsageadminComponent, ContactadminComponent, BecomeadminComponent, AboutadminComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,

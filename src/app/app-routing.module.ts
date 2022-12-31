@@ -5,6 +5,9 @@ import { AdminpageComponent } from './features/auth/pages/adminpage/adminpage.co
 import { ContactComponent } from './features/auth/pages/contact/contact.component';
 import { AboutComponent } from './features/auth/pages/about/about.component';
 import { UsageComponent } from './features/auth/pages/usage/usage.component';
+import { UsageadminComponent } from './features/auth/pages/usageadmin/usageadmin.component';
+import { ContactadminComponent } from './features/auth/pages/contactadmin/contactadmin.component';
+import { BecomeadminComponent } from './features/auth/pages/becomeadmin/becomeadmin.component';
 const routes: Routes = [
   {
     path: '',
@@ -38,7 +41,19 @@ const routes: Routes = [
     component :ContactComponent
     
   },
-
+  
+  {
+    path:'contactadmin',
+    component :ContactadminComponent
+    
+  },
+  
+  {
+    path:'becomeadmin',
+    component :BecomeadminComponent
+    
+  },
+  
   {
     path:'about',
     component :AboutComponent
@@ -48,6 +63,12 @@ const routes: Routes = [
   {
     path:'usage',
     component :UsageComponent
+
+  },
+
+  {
+    path:'usageadmin',
+    component :UsageadminComponent
 
   },
 
