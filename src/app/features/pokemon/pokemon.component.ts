@@ -67,6 +67,7 @@ export class PokemonComponent implements OnInit {
     this.selectedPokemon = undefined;
   }
 
+  
   ngOnDestroy() {
     this.destroyed$.next();
   }
