@@ -24,4 +24,5 @@ export class DetailComponent implements OnInit {
   delete() {
     this.deletePokemon.emit();
   }
+  
 }
