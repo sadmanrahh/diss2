@@ -17,6 +17,10 @@
         margin-top: 0;
     }
     
+    h1{
+        color:red;
+    }
+    
     .content {
         display: flex;
     
@@ -27,4 +31,5 @@
             object-fit: cover;
         }
     }
+
 }
