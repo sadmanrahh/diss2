@@ -140,9 +140,6 @@
       
       <!-- .................../ JS Code for smooth scrolling /...................... -->
  
-  
-  
-  
   </body>
   
   
@@ -154,20 +151,32 @@
 
 
 <div class="container">
-    
+    <div class="dropdown">
+        <button class="dropdown-btn">Filter</button>
+        <div class="dropdown-content">
+          <a href="#">Option 1</a>
+          <a href="#">Option 2</a>
+          <a href="#">Option 3</a>
+        </div>
+      </div>
+
+
     
 
     <div class="content">
       <div class="list">
         <div class="list-header">
           <h3>List of Available Items</h3>
-          
         </div>
+         
         <app-list
           [pokemon$]="allPokemon$"
           (pokemonEmitter)="selectPokemon($event)"
         ></app-list>
+        
+        
       </div>
+      
       <app-detail
         [pokemon]="selectedPokemon"
         *ngIf="selectedPokemon"
