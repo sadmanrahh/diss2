@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
 
+
 @NgModule({
   declarations: [UserComponent, FormComponent, ListComponent, DetailComponent],
   providers: [],
@@ -25,6 +26,8 @@ import { DetailComponent } from './components/detail/detail.component';
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
+    
+    
   ],
 })
 export class UserModule {}

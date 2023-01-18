@@ -11,7 +11,6 @@ import { NgModule } from '@angular/core';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [ 
@@ -21,6 +20,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
     BrowserAnimationsModule,
+    
+  
     
   ],
   providers: [],
