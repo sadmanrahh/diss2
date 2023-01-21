@@ -7,11 +7,12 @@ import {
   doc,
   updateDoc,
 } from '@firebase/firestore';
-import { Firestore, collectionData, docData } from '@angular/fire/firestore';
+import { Firestore, collectionData, docData, orderBy } from '@angular/fire/firestore';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Pokemon } from '../features/pokemon/interfaces/pokemon.interface';
+import { stringLength } from '@firebase/util';
 
 
 @Injectable({
@@ -33,6 +34,7 @@ export class PokedexFirestoreService {
   get(id: string) {
     const pokemonDocumentReference = doc(this.firestore, `pokemon/${id}`);
     return docData(pokemonDocumentReference, { idField: 'id' });
+    
   }
 
   create(pokemon: Pokemon) {

@@ -1,23 +1,22 @@
 <form [formGroup]="form">
     <mat-form-field>
       <mat-label>Name</mat-label>
-      <input required formControlName="name" class="form-control" placeholder="Pasta" type="text" matInput />
+      <input required formControlName="name" class="form-control" placeholder="Charmander" type="text" matInput />
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Available or Sold</mat-label>
+      <mat-label>Type</mat-label>
       <input required formControlName="type" class="form-control" placeholder="Fire" type="text" matInput />
-      
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Price</mat-label>
-      <input matInput required formControlName="height" class="form-control" placeholder="7" type="number" />
+      <mat-label>Height</mat-label>
+      <input matInput required formControlName="height" class="form-control" placeholder="0.5" type="number" />
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Payment Link or if free write Call to collect for Free</mat-label>
-      <input matInput required formControlName="weight" class="form-control" placeholder="www.google.com"  type="link" />
+      <mat-label>Weight</mat-label>
+      <input matInput required formControlName="weight" class="form-control" placeholder="9.5" type="number" />
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Location and Contact Number</mat-label>
+      <mat-label>Description</mat-label>
       <input matInput required formControlName="description" class="form-control" placeholder="Description" type="text" />
     </mat-form-field>
     <mat-form-field>
@@ -27,5 +26,4 @@
     <button type="button" mat-raised-button (click)="submit()" color="primary" [disabled]="!form.valid">
       Submit
     </button>
-    
   </form>

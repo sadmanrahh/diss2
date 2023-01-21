@@ -32,12 +32,13 @@ const routes: Routes = [
     path:'adminpage',
     component :AdminpageComponent
     
-  },
+  }, 
   { 
     path: 'user', 
   loadChildren: () => 
   import('./features/user/user.module').then(m => m.UserModule) },
   
+ 
   {
     path:'contact',
     component :ContactComponent
@@ -83,6 +84,7 @@ const routes: Routes = [
     component :CharitiesComponent
 
   },
+  { path: 'char', loadChildren: () => import('./features/char/char.module').then(m => m.CharModule) },
 
   {
     path: '**',

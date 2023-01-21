@@ -5,18 +5,16 @@
     <div class="content">
       <img [src]="pokemon.imgUrl" />
       <div>
-    
-        <p> Price: {{ pokemon.height }}</p>
-        
+        <p>Height: {{ pokemon.height }}</p>
+        <p>Weight: {{ pokemon.weight }}</p>
         <p>
           {{ pokemon.description }}
         </p>
         
-        <p>Buy: {{ pokemon.weight }}</p>
+        <h2>Use the above link to buy! Or if free call to collect</h2>
       </div>
     </div>
     <div>
-      <button (click)="update()"  class="nav-btn">Edit</button>
-      <button (click)="delete()"  class="nav-btn2">Delete</button>
+ 
     </div>
   </div>

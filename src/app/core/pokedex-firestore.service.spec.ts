@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { PokedexFirestoreService } from './pokedex-firestore.service';
-
+import { orderBy } from '@firebase/firestore';
 describe('PokedexFirestoreService', () => {
   let service: PokedexFirestoreService;
 

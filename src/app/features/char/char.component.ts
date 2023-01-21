@@ -1,32 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {  OnInit } from '@angular/core';
 import { Observable, Subject, filter, takeUntil, tap } from 'rxjs';
 
 import { FormComponent } from './components/form/form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { PokedexFirestoreService } from 'src/app/core/pokedex-firestore.service';
-import { Pokemon } from './interfaces/pokemon.interface';
+import { Pokemon } from '../pokemon/interfaces/pokemon.interface';
 import { orderBy } from '@firebase/firestore';
 
 @Component({
-  selector: 'app-pokemon',
-  templateUrl: './pokemon.component.html',
-  styleUrls: ['./pokemon.component.scss'],
+  selector: 'app-user',
+  templateUrl: './char.component.html',
+  styleUrls: ['./char.component.scss']
 })
-export class PokemonComponent implements OnInit {
+
+export class CharComponent implements OnInit {
   allPokemon$: Observable<Pokemon[]>;
   selectedPokemon?: Pokemon;
   destroyed$ = new Subject<void>();
-  count = 10;
+  
+  searchText:any;
+
+  
+ 
   constructor(
     private readonly pokedexService: PokedexFirestoreService,
     private readonly dialog: MatDialog
+    
   ) {}
-
   ngOnInit(): void {
-    this.allPokemon$ = this.pokedexService.getAll(), orderBy('type', 'asc');
-  }
-  decrement() {
-    this.count--;
+    this.allPokemon$ = this.pokedexService.getAll(), orderBy('type', 'desc');
   }
 
   addPokemon() {
@@ -70,8 +73,10 @@ export class PokemonComponent implements OnInit {
     this.pokedexService.delete(this.selectedPokemon!.id);
     this.selectedPokemon = undefined;
   }
-  
+
   ngOnDestroy() {
     this.destroyed$.next();
   }
+  
+  
 }
