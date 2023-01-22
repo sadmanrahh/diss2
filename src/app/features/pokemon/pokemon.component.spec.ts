@@ -21,3 +21,4 @@ describe('PokemonComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
