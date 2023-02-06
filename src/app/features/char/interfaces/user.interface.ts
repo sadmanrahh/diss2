@@ -6,6 +6,8 @@ export interface User {
     name: string;
     type: string;
     weight: number;
+    contact:number;
+    
   }
 
   export interface UserComponent {}

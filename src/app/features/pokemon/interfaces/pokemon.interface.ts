@@ -6,6 +6,8 @@ export interface Pokemon {
     name: string;
     type: string;
     weight: number;
+    contact:number;
+   
   }
   export interface Second {
     height: number;

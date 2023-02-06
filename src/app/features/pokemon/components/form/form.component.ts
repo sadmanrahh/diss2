@@ -30,6 +30,8 @@ export class FormComponent implements OnInit {
       description: [this.pokemon.description, [Validators.required]],
       height: [this.pokemon.height],
       weight: [this.pokemon.weight, [Validators.required]],
+      contact: [this.pokemon.contact, [Validators.required]],
+   
       imgUrl: [this.pokemon.imgUrl, [Validators.required]],
     });
   }

@@ -1,23 +1,42 @@
-<div class="background">
-  <div class="login-container">
-    <div class="text-container">
-      <h1>Welcome</h1>
-      <p>
-        Enter this awesome app to get super cheap or even free food
-        by just logging in with your google account!
-      </p>
-      <button class="mat-raised-button" (click)="loginWithGoogle()">
-         Login
-      </button>
-      <a href="https://support.google.com/accounts/answer/27441?hl=en/">
-        <button>Register</button>
-        </a>
-    </div>
-    <div class="form-container">
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+      <br>
+      <br>
+      <br>
+      <br>
       <h1>Lets Not Waste</h1>
       
       <h5>Login As Shop Manager</h5>
-      <ngbytes-login-form (formData)="login($event)"></ngbytes-login-form>
-    </div>
-  </div>
+			<ngbytes-login-form (formData)="login($event)"></ngbytes-login-form>
+			<div class="social-login">
+				<h3>User Login</h3>
+				<div class="social-icons">
+          <button class="button login__submit">
+            <span class="button__text"(click)="loginWithGoogle()">LogIn</span>
+            <i class="button__icon fas fa-chevron-right"></i>
+          </button>				
+        
+      
+            <button class="button login__submit" onclick="location.href='https://support.google.com/accounts/answer/27441?hl=en'">
+              
+              <span class="button__text">Sign
+                In
+              </span>
+            
+              <i class="button__icon fas fa-chevron-right"></i>
+            </button>
+         
+          
+				</div>
+        
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
 </div>

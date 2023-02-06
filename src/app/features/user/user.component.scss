@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	
 }
 h1{
 	font-size: 70px;
@@ -955,4 +956,38 @@ li a:hover{
     	font-size: 60px;
     	line-height: 100px;
     }
+	.belownav{
+		background-color: #fff;
+		padding: 2rem 0;
+	  }
+	  .belownav{
+		width: 150%;
+		position: relative;
+	   
+	  }
+	  .belownav img{
+	  
+		width: 100%;
+		object-fit: cover;
+	  }
+
+.belownav{
+	background-color: #fff;
+	padding: 2rem 0;
+  }
+  .belownav{
+	width: 100%;
+   
+  }
+  .belownav img{
+  
+	width: 100%;
+	object-fit: cover;
+  }
 }
+
+
+
+
+
+

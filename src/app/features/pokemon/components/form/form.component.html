@@ -6,7 +6,10 @@
     <mat-form-field>
       <mat-label>Available or Sold</mat-label>
       <input required formControlName="type" class="form-control" placeholder="Fire" type="text" matInput />
-      
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Contact Number</mat-label>
+      <input matInput required formControlName="contact" class="form-control" placeholder="+4472839448291" type="text" />
     </mat-form-field>
     <mat-form-field>
       <mat-label>Price</mat-label>
@@ -17,9 +20,10 @@
       <input matInput required formControlName="weight" class="form-control" placeholder="www.google.com"  type="link" />
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Location and Contact Number</mat-label>
+      <mat-label>Location </mat-label>
       <input matInput required formControlName="description" class="form-control" placeholder="Description" type="text" />
     </mat-form-field>
+   
     <mat-form-field>
       <mat-label>Image URL</mat-label>
       <input matInput required formControlName="imgUrl" class="form-control" placeholder="https://charmander.png" type="text" />
