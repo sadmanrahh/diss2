@@ -11,8 +11,13 @@ import { NgModule } from '@angular/core';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FirebaseCrudComponent } from './firebase-crud/firebase-crud.component';
+import { FormsModule } from '@angular/forms';
+import { FirebaseCrudadminComponent } from './firebase-crudadmin/firebase-crudadmin.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FirebaseCrudComponent, FirebaseCrudadminComponent],
   imports: [ 
     BrowserModule,
     AppRoutingModule,
@@ -20,7 +25,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
     BrowserAnimationsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    FormsModule,
+    MatFormFieldModule
+   
     
   
     

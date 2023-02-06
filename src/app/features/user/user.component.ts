@@ -18,7 +18,8 @@ export class UserComponent implements OnInit {
 
   constructor(
     private readonly pokedexService: PokedexFirestoreService,
-    private readonly dialog: MatDialog
+    private readonly dialog: MatDialog,
+    
   ) {}
 
   ngOnInit(): void {

@@ -10,6 +10,8 @@ import { ContactadminComponent } from './features/auth/pages/contactadmin/contac
 import { BecomeadminComponent } from './features/auth/pages/becomeadmin/becomeadmin.component';
 import { PremiumComponent } from './features/auth/pages/premium/premium.component';
 import { CharitiesComponent } from './features/auth/pages/charities/charities.component';
+import { FirebaseCrudComponent } from './firebase-crud/firebase-crud.component';
+import { FirebaseCrudadminComponent } from './firebase-crudadmin/firebase-crudadmin.component';
 const routes: Routes = [
   {
     path: '',
@@ -85,7 +87,16 @@ const routes: Routes = [
 
   },
   { path: 'char', loadChildren: () => import('./features/char/char.module').then(m => m.CharModule) },
+  {
+    path:'charity',
+    component :FirebaseCrudComponent
 
+  },
+  {
+    path:'charityadmin',
+    component :FirebaseCrudadminComponent
+
+  },
   {
     path: '**',
     redirectTo: '',
