@@ -12,6 +12,7 @@ import { PremiumComponent } from './features/auth/pages/premium/premium.componen
 import { CharitiesComponent } from './features/auth/pages/charities/charities.component';
 import { FirebaseCrudComponent } from './firebase-crud/firebase-crud.component';
 import { FirebaseCrudadminComponent } from './firebase-crudadmin/firebase-crudadmin.component';
+import { AboutadminComponent } from './features/auth/pages/aboutadmin/aboutadmin.component';
 const routes: Routes = [
   {
     path: '',
@@ -62,6 +63,11 @@ const routes: Routes = [
   {
     path:'about',
     component :AboutComponent
+    
+  },
+  {
+    path:'aboutadmin',
+    component :AboutadminComponent
     
   },
   

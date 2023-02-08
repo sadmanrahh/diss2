@@ -21,3 +21,5 @@ describe('BecomeadminComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
