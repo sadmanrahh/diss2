@@ -13,6 +13,8 @@ import { CharitiesComponent } from './features/auth/pages/charities/charities.co
 import { FirebaseCrudComponent } from './firebase-crud/firebase-crud.component';
 import { FirebaseCrudadminComponent } from './firebase-crudadmin/firebase-crudadmin.component';
 import { AboutadminComponent } from './features/auth/pages/aboutadmin/aboutadmin.component';
+import { TermsComponent } from './features/auth/pages/terms/terms.component';
+import { TermsadminComponent } from './features/auth/pages/termsadmin/termsadmin.component';
 const routes: Routes = [
   {
     path: '',
@@ -53,7 +55,19 @@ const routes: Routes = [
     component :ContactadminComponent
     
   },
-  
+
+  {
+    path:'terms',
+    component :TermsComponent
+    
+  },
+
+  {
+    path:'termsadmin',
+    component :TermsadminComponent
+    
+  },
+
   {
     path:'becomeadmin',
     component :BecomeadminComponent

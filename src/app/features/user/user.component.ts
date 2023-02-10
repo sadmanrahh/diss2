@@ -71,4 +71,6 @@ export class UserComponent implements OnInit {
   ngOnDestroy() {
     this.destroyed$.next();
   }
+  
 }
+

@@ -6,7 +6,7 @@ import { FirebaseService } from '../firebase.service';
 @Component({
   selector: 'app-firebase-crud',
   templateUrl: './firebase-crudadmin.component.html',
-  styleUrls: ['./firebase-crudadmin.component.css']
+  styleUrls: ['./firebase-crudadmin.component.scss']
 })
 export class FirebaseCrudadminComponent implements OnInit {
 
