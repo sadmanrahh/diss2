@@ -1,3 +1,12 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Discount or even FREE food available in multiple locations. Want to save money on dinners and reduce food waste at the same time? Look no further, as you are in the right place!">
+  <meta name="keywords" content="Free,Food,Shops,ShopsNearby,Discountedfood,letsnotwaste,foodonline">
+  <meta name="author" content="Sadman Rahman">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <div class="container">
 	<div class="screen">
 		<div class="screen__content">
@@ -7,10 +16,11 @@
       <br>
       <h1>Lets Not Waste</h1>
       
-      <h5>Login As Shop Manager</h5>
+      <p>Login As Shop Manager</p>
+      <br>
 			<ngbytes-login-form (formData)="login($event)"></ngbytes-login-form>
 			<div class="social-login">
-				<h3>User Login</h3>
+				<h2>User Login</h2>
 				<div class="social-icons">
           <button class="button login__submit">
             <span class="button__text"(click)="loginWithGoogle()">LogIn</span>
@@ -21,7 +31,6 @@
             <button class="button login__submit" onclick="location.href='https://support.google.com/accounts/answer/27441?hl=en'">
               
               <span class="button__text">Sign
-                In
               </span>
             
               <i class="button__icon fas fa-chevron-right"></i>
