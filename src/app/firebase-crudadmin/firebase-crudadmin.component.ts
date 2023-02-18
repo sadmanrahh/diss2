@@ -10,48 +10,48 @@ import { FirebaseService } from '../firebase.service';
 })
 export class FirebaseCrudadminComponent implements OnInit {
 
-  studentDetails = {
+  CharityDetails = {
     name: '',
-    age: ''
+    status: ''
   }
-  studentCollectiondata: { id: string, name: string, age: string }[] | any = [];
+  CharityCollectiondata: { id: string, name: string, status: string }[] | any = [];
 
   constructor(private firebaseService: FirebaseService) { }
 
   ngOnInit(): void {
     this.get();
     this.firebaseService.obsr_UpdatedSnapshot.subscribe((snapshot) => {
-      this.updateStudentCollection(snapshot);
+      this.updateCharityCollection(snapshot);
     })
   }
 
   async add() {
-    const { name, age, } = this.studentDetails;
-    await this.firebaseService.addStudent(name, age);
-    this.studentDetails.name = "";
-    this.studentDetails.age = "";
-    this.studentDetails.age = "";
+    const { name, status, } = this.CharityDetails;
+    await this.firebaseService.addRequest(name, status);
+    this.CharityDetails.name = "";
+    this.CharityDetails.status = ""; 
+    this.CharityDetails.status = "";
     
   }
 
   async get() {
-    const snapshot = await this.firebaseService.getStudents();
-    this.updateStudentCollection(snapshot);
+    const snapshot = await this.firebaseService.getRequests();
+    this.updateCharityCollection(snapshot);
   }
 
-  updateStudentCollection(snapshot: QuerySnapshot<DocumentData>) {
-    this.studentCollectiondata = [];
-    snapshot.docs.forEach((student) => {
-      this.studentCollectiondata.push({ ...student.data(), id: student.id });
+  updateCharityCollection(snapshot: QuerySnapshot<DocumentData>) {
+    this.CharityCollectiondata = [];
+    snapshot.docs.forEach((request) => {
+      this.CharityCollectiondata.push({ ...request.data(), id: request.id });
     })
   }
 
   async delete(docId: string) {
-    await this.firebaseService.deleteStudent(docId);
+    await this.firebaseService.deleteRequest(docId);
   }
 
-  async update(docId: string, name: HTMLInputElement, age: HTMLInputElement) {
-    await this.firebaseService.updateStudent(docId, name.value, age.value);
+  async update(docId: string, name: HTMLInputElement, status: HTMLInputElement) {
+    await this.firebaseService.updateRequest(docId, name.value, status.value);
   }
 
 }

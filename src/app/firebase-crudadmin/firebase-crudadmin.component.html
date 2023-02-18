@@ -44,16 +44,16 @@
 <br>
 <h1>Requests</h1>
 <div class="show">
-    <ng-container *ngFor="let student of studentCollectiondata">
+    <ng-container *ngFor="let student of CharityCollectiondata">
         <div>
             <label style="color: teal;font-weight: 500;" for="name-show">Collector Name & Store Requested collection from:</label>
             <input type="text" name="name-show" [value]="student.name" required #name>
 
-            <label style="color: teal;font-weight: 500;" for="age-show">Status:</label>
-            <input type="text" name="age-show" [value]="student.age" required #age>
+            <label style="color: teal;font-weight: 500;" for="status-show">Status:</label>
+            <input type="text" name="status-show" [value]="student.status" required #status>
 
             <button type="button" class="dltbutton"(click)="delete(student.id)">Delete</button>
-            <button type="button" (click)="update(student.id, name, age)">Update</button>
+            <button type="button" (click)="update(student.id, name, status)">Update</button>
         </div>
         <br>
     </ng-container>
