@@ -31,7 +31,7 @@ const routes: Routes = [
   {
     path: 'order',
     loadChildren: () =>
-      import('./features/seller/pokemon.module').then((m) => m.PokemonModule),
+      import('./features/seller/seller.module').then((m) => m.PokemonModule),
   },
   {
     path:'adminpage',

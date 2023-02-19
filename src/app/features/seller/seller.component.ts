@@ -8,9 +8,9 @@ import { Pokemon } from './interfaces/pokemon.interface';
 import { orderBy } from '@firebase/firestore';
 
 @Component({
-  selector: 'app-pokemon',
-  templateUrl: './pokemon.component.html',
-  styleUrls: ['./pokemon.component.scss'],
+  selector: 'app-pokemon', 
+  templateUrl: './seller.component.html',
+  styleUrls: ['./seller.component.scss'],
 })
 export class PokemonComponent implements OnInit {
   allPokemon$: Observable<Pokemon[]>;
