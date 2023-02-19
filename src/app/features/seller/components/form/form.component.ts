@@ -3,7 +3,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { Pokemon } from '../../interfaces/pokemon.interface';
+import { Pokemon } from '../../interfaces/seller.interface';
 import { orderBy } from '@firebase/firestore';
 @Component({
   selector: 'app-form',

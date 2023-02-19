@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { Pokemon } from '../../interfaces/pokemon.interface';
+import { Pokemon } from '../../interfaces/seller.interface';
 
 @Component({
   selector: 'app-list',

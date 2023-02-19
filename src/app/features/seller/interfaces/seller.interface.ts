@@ -6,7 +6,7 @@ export interface Pokemon {
     name: string;
     type: string;
     weight: number;
-    contact:number;
+    contact:number; 
    
   }
   export interface Second {

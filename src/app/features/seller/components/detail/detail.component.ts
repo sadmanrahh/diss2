@@ -1,7 +1,7 @@
 
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { Pokemon } from '../../interfaces/pokemon.interface';
+import { Pokemon } from '../../interfaces/seller.interface';
 import { orderBy } from '@firebase/firestore';
 @Component({
   selector: 'app-detail',

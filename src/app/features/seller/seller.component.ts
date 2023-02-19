@@ -4,7 +4,7 @@ import { Observable, Subject, filter, takeUntil, tap } from 'rxjs';
 import { FormComponent } from './components/form/form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SellFirestoreService } from 'src/app/core/sell-firestore.service';
-import { Pokemon } from './interfaces/pokemon.interface';
+import { Pokemon } from './interfaces/seller.interface';
 import { orderBy } from '@firebase/firestore';
 
 @Component({
