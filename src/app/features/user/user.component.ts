@@ -4,11 +4,11 @@ import { Observable, Subject, filter, takeUntil, tap } from 'rxjs';
 
 import { FormComponent } from './components/form/form.component';
 import { MatDialog } from '@angular/material/dialog';
-import { PokedexFirestoreService } from 'src/app/core/pokedex-firestore.service';
+import { SellFirestoreService } from 'src/app/core/sell-firestore.service';
 import { Pokemon } from '../pokemon/interfaces/pokemon.interface';
 @Component({
   selector: 'app-user',
-  templateUrl: './user.component.html',
+  templateUrl: './user.component.html', 
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
@@ -17,7 +17,7 @@ export class UserComponent implements OnInit {
   destroyed$ = new Subject<void>();
 
   constructor(
-    private readonly pokedexService: PokedexFirestoreService,
+    private readonly pokedexService: SellFirestoreService,
     private readonly dialog: MatDialog,
     
   ) {}

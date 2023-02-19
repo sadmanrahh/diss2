@@ -7,18 +7,18 @@ import {
   doc,
   updateDoc,
 } from '@firebase/firestore';
-import { Firestore, collectionData, docData, orderBy } from '@angular/fire/firestore';
+import { Firestore, collectionData, docData } from '@angular/fire/firestore';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Pokemon } from '../features/pokemon/interfaces/pokemon.interface';
-import { stringLength } from '@firebase/util';
+
 
 
 @Injectable({
   providedIn: 'root',
 })
-export class PokedexFirestoreService {
+export class SellFirestoreService {
   private pokemonCollection: CollectionReference<DocumentData>;
 
   constructor(private readonly firestore: Firestore) {

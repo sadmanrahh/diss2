@@ -4,7 +4,7 @@ import { Observable, Subject, filter, takeUntil, tap } from 'rxjs';
 
 import { FormComponent } from './components/form/form.component';
 import { MatDialog } from '@angular/material/dialog';
-import { PokedexFirestoreService } from 'src/app/core/pokedex-firestore.service';
+import { SellFirestoreService } from 'src/app/core/sell-firestore.service';
 import { Pokemon } from '../pokemon/interfaces/pokemon.interface';
 import { orderBy } from '@firebase/firestore';
 
@@ -24,7 +24,7 @@ export class CharComponent implements OnInit {
   
  
   constructor(
-    private readonly pokedexService: PokedexFirestoreService,
+    private readonly pokedexService: SellFirestoreService,
     private readonly dialog: MatDialog
     
   ) {}
