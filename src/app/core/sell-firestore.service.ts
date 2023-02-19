@@ -11,7 +11,7 @@ import { Firestore, collectionData, docData } from '@angular/fire/firestore';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Pokemon } from '../features/pokemon/interfaces/pokemon.interface';
+import { Pokemon } from '../features/seller/interfaces/pokemon.interface';
 
 
 

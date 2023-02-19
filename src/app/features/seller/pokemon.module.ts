@@ -14,7 +14,7 @@ import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [PokemonComponent, FormComponent, ListComponent, DetailComponent],
-  providers: [],
+  providers: [], 
   imports: [
     CommonModule,
     PokemonRoutingModule,
