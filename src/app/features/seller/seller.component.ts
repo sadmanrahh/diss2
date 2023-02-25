@@ -6,7 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SellFirestoreService } from 'src/app/core/sell-firestore.service';
 import { Pokemon } from './interfaces/seller.interface';
 import { orderBy } from '@firebase/firestore';
-
+ 
 @Component({
   selector: 'app-pokemon', 
   templateUrl: './seller.component.html',
