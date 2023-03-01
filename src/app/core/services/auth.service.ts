@@ -1,7 +1,6 @@
 import {
     Auth,
     GoogleAuthProvider,
-    createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signInWithPopup,
     signOut,
@@ -24,9 +23,6 @@ import {
       return signInWithPopup(this.auth, new GoogleAuthProvider());
     }
   
-    register({ email, password }: LoginData) {
-      return createUserWithEmailAndPassword(this.auth, email, password);
-    }
   
     logout() {
       return signOut(this.auth);

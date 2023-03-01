@@ -5,18 +5,18 @@ import { Observable, Subject, filter, takeUntil, tap } from 'rxjs';
 import { FormComponent } from './components/form/form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SellFirestoreService } from 'src/app/core/sell-firestore.service';
-import { Pokemon } from '../seller/interfaces/seller.interface';
+import { Items } from '../seller/interfaces/seller.interface';
 import { orderBy } from '@firebase/firestore';
 
-@Component({
+@Component({ 
   selector: 'app-user',
   templateUrl: './char.component.html',
   styleUrls: ['./char.component.scss']
 })
 
 export class CharComponent implements OnInit {
-  allPokemon$: Observable<Pokemon[]>;
-  selectedPokemon?: Pokemon;
+  allPokemon$: Observable<Items[]>;
+  selectedPokemon?: Items;
   destroyed$ = new Subject<void>();
   
   searchText:any;
@@ -65,7 +65,7 @@ export class CharComponent implements OnInit {
       .subscribe();
   }
 
-  selectPokemon(pokemon: Pokemon) {
+  selectPokemon(pokemon: Items) {
     this.selectedPokemon = pokemon;
   }
 

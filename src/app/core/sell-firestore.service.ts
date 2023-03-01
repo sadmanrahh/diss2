@@ -11,46 +11,46 @@ import { Firestore, collectionData, docData } from '@angular/fire/firestore';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Pokemon } from '../features/seller/interfaces/seller.interface';
-
+import { Items } from '../features/seller/interfaces/seller.interface';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class SellFirestoreService {
-  private pokemonCollection: CollectionReference<DocumentData>;
+  private itemsCollection: CollectionReference<DocumentData>;
 
   constructor(private readonly firestore: Firestore) {
-    this.pokemonCollection = collection(this.firestore, 'pokemon');
+    this.itemsCollection = collection(this.firestore, 'items');
   }
 
   getAll() {
-    return collectionData(this.pokemonCollection, {
+    return collectionData(this.itemsCollection, {
       idField: 'id',
-    }) as Observable<Pokemon[]>;
+    }) as Observable<Items[]>;
   }
 
   get(id: string) {
-    const pokemonDocumentReference = doc(this.firestore, `pokemon/${id}`);
-    return docData(pokemonDocumentReference, { idField: 'id' });
+    const itemsDocumentReference = doc(this.firestore, `items/${id}`);
+    return docData(itemsDocumentReference, { idField: 'id' });
     
   }
 
-  create(pokemon: Pokemon) {
-    return addDoc(this.pokemonCollection, pokemon);
+  create(items: Items) {
+    return addDoc(this.itemsCollection, items);
   }
 
-  update(pokemon: Pokemon) {
-    const pokemonDocumentReference = doc(
+  update(items: Items) {
+    const itemsDocumentReference = doc(
       this.firestore,
-      `pokemon/${pokemon.id}`
+      `items/${items.id}`
     );
-    return updateDoc(pokemonDocumentReference, { ...pokemon });
+    return updateDoc(itemsDocumentReference, { ...items });
   }
 
   delete(id: string) {
-    const pokemonDocumentReference = doc(this.firestore, `pokemon/${id}`);
-    return deleteDoc(pokemonDocumentReference);
+    const itemsDocumentReference = doc(this.firestore, `items/${id}`);
+    return deleteDoc(itemsDocumentReference);
   }
 }
+

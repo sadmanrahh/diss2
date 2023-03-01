@@ -1,32 +1,32 @@
-import { Component } from '@angular/core';
-import {  OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable, Subject, filter, takeUntil, tap } from 'rxjs';
 
 import { FormComponent } from './components/form/form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SellFirestoreService } from 'src/app/core/sell-firestore.service';
-import { Pokemon } from '../seller/interfaces/seller.interface';
+import { Items } from './interfaces/user.interface';
+import { orderBy } from '@firebase/firestore';
+
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html', 
-  styleUrls: ['./user.component.scss']
+  selector: 'app-pokemon',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.scss'],
 })
-export class UserComponent implements OnInit {
-  allPokemon$: Observable<Pokemon[]>;
-  selectedPokemon?: Pokemon;
+export class ItemsComponent implements OnInit {
+  allItems$: Observable<Items[]>;
+  selectedItems?: Items;
   destroyed$ = new Subject<void>();
 
   constructor(
-    private readonly pokedexService: SellFirestoreService,
-    private readonly dialog: MatDialog,
-    
+    private readonly SellService: SellFirestoreService,
+    private readonly dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
-    this.allPokemon$ = this.pokedexService.getAll();
+    this.allItems$ = this.SellService.getAll(),orderBy('type', 'asc');
   }
 
-  addPokemon() {
+  addItems() {
     const dialogRef = this.dialog.open(FormComponent, {
       data: {},
       width: '40%',
@@ -36,15 +36,15 @@ export class UserComponent implements OnInit {
       .afterClosed()
       .pipe(
         filter(Boolean),
-        tap((pokemon) => this.pokedexService.create(pokemon)),
+        tap((item) => this.SellService.create(item)),
         takeUntil(this.destroyed$)
       )
       .subscribe();
   }
 
-  updatePokemon() {
+  updateItems() {
     const dialogRef = this.dialog.open(FormComponent, {
-      data: { ...this.selectedPokemon },
+      data: { ...this.selectedItems },
       width: '40%',
     });
 
@@ -52,25 +52,23 @@ export class UserComponent implements OnInit {
       .afterClosed()
       .pipe(
         filter(Boolean),
-        tap((pokemon) => this.pokedexService.update(pokemon)),
-        tap((pokemon) => this.selectPokemon(pokemon)),
+        tap((item) => this.SellService.update(item)),
+        tap((item) => this.selectItems(item)),
         takeUntil(this.destroyed$)
       )
       .subscribe();
   }
 
-  selectPokemon(pokemon: Pokemon) {
-    this.selectedPokemon = pokemon;
+  selectItems(item: Items) {
+    this.selectedItems = item;
   }
 
-  deletePokemon() {
-    this.pokedexService.delete(this.selectedPokemon!.id);
-    this.selectedPokemon = undefined;
+  deleteItems() {
+    this.SellService.delete(this.selectedItems!.id);
+    this.selectedItems = undefined;
   }
 
   ngOnDestroy() {
     this.destroyed$.next();
   }
-  
 }
-

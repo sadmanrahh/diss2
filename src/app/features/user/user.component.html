@@ -41,18 +41,18 @@
                 
                 <app-list
                 
-                  [pokemon$]="allPokemon$"
-                  (pokemonEmitter)="selectPokemon($event)"
+                    [item$]="allItems$"
+          (itemEmitter)="selectItems($event)"
                 ></app-list>
                 
             
               </div>
               
               <app-detail
-                [pokemon]="selectedPokemon"
-                *ngIf="selectedPokemon"
-                (deletePokemon)="deletePokemon()"
-                (updatePokemon)="updatePokemon()"
+              [item]="selectedItems"
+              *ngIf="selectedItems"
+              (deleteItems)="deleteItems()"
+              (updateItems)="updateItems()"
               ></app-detail>
             </div>
           </div>

@@ -1,28 +1,26 @@
-
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { User } from '../../interfaces/user.interface';
-
+import { Items } from '../../interfaces/user.interface';
+import { orderBy } from '@firebase/firestore';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-  @Input() pokemon: User;
-  @Output() updatePokemon = new EventEmitter<void>();
-  @Output() deletePokemon = new EventEmitter<void>();
+  @Input() item: Items;
+  @Output() updateItems = new EventEmitter<void>();
+  @Output() deleteItems = new EventEmitter<void>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   update() {
-    this.updatePokemon.emit();
+    this.updateItems.emit(),orderBy('type', 'asc');
   }
 
   delete() {
-    this.deletePokemon.emit();
+    this.deleteItems.emit();
   }
-  
 }

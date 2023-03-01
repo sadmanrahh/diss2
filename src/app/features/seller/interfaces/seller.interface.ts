@@ -1,4 +1,4 @@
-export interface Pokemon {
+  export interface Items {
     height: number;
     id: string;
     description: string;
@@ -9,14 +9,5 @@ export interface Pokemon {
     contact:number; 
    
   }
-  export interface Second {
-    height: number;
-    id: string;
-    description: string;
-    imgUrl: string;
-    name: string;
-    type: string;
-    weight: number;
-  }
-  export interface PokemonComponent {}
-  export interface SecondComponent {}
+
+  export interface ItemsComponent {}

@@ -1,24 +1,29 @@
 <form [formGroup]="form">
   <mat-form-field>
     <mat-label>Name</mat-label>
-    <input required formControlName="name" class="form-control" placeholder="Charmander" type="text" matInput />
+    <input required formControlName="name" class="form-control" placeholder="Pasta" type="text" matInput />
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Price</mat-label>
+    <mat-label>Available or Sold</mat-label>
     <input required formControlName="type" class="form-control" placeholder="Fire" type="text" matInput />
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Original Price</mat-label>
-    <input matInput required formControlName="height" class="form-control" placeholder="0.5" type="number" />
+    <mat-label>Contact Number</mat-label>
+    <input matInput required formControlName="contact" class="form-control" placeholder="+4472839448291" type="text" />
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Calories</mat-label>
-    <input matInput required formControlName="weight" class="form-control" placeholder="9.5" type="number" />
+    <mat-label>Price</mat-label>
+    <input matInput required formControlName="height" class="form-control" placeholder="7" type="number" />
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Description</mat-label>
+    <mat-label>Payment Link</mat-label>
+    <input matInput required formControlName="weight" class="form-control" placeholder="www.google.com"  type="link" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Location </mat-label>
     <input matInput required formControlName="description" class="form-control" placeholder="Description" type="text" />
   </mat-form-field>
+ 
   <mat-form-field>
     <mat-label>Image URL</mat-label>
     <input matInput required formControlName="imgUrl" class="form-control" placeholder="https://charmander.png" type="text" />
@@ -26,4 +31,5 @@
   <button type="button" mat-raised-button (click)="submit()" color="primary" [disabled]="!form.valid">
     Submit
   </button>
+  
 </form>

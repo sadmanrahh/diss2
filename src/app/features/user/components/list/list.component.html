@@ -1,16 +1,16 @@
 <div class="card-container">
     <mat-card
-      *ngFor="let pokemon of pokemon$ | async"
-      (click)="selectPokemon(pokemon)"
+    *ngFor="let item of item$ | async"
+    (click)="selectItems(item)"
     >
       <mat-card-header>
-        <mat-card-title>{{ pokemon.name }}</mat-card-title>
-        <mat-card-subtitle>{{ pokemon.type }} </mat-card-subtitle>
+        <mat-card-title>{{ item.name }}</mat-card-title>
+        <mat-card-subtitle>{{ item.type }} </mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image [src]="pokemon.imgUrl" alt="Photo Empty" />
+      <img mat-card-image [src]="item.imgUrl" alt="Photo Empty" />
       <mat-card-content>
         <p>
-          {{ pokemon.description }}
+          {{ item.description }}
         </p>
       </mat-card-content>
     </mat-card>

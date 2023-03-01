@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
-import { UserComponent } from './user.component';
+import { ItemsComponent } from './user.component';
 import { FormComponent } from './components/form/form.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -15,7 +15,7 @@ import { DetailComponent } from './components/detail/detail.component';
 
 
 @NgModule({
-  declarations: [UserComponent, FormComponent, ListComponent, DetailComponent],
+  declarations: [ItemsComponent, FormComponent, ListComponent, DetailComponent],
   providers: [],
   imports: [
     CommonModule,

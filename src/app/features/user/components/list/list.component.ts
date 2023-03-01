@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { User } from '../../interfaces/user.interface';
+import { Items } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-list',
@@ -9,14 +9,14 @@ import { User } from '../../interfaces/user.interface';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  @Input() pokemon$: Observable<User[]>;
-  @Output() pokemonEmitter = new EventEmitter<User>();
+  @Input() item$: Observable<Items[]>;
+  @Output() itemEmitter = new EventEmitter<Items>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  selectPokemon(pokemon: User) {
-    this.pokemonEmitter.emit(pokemon);
+  selectItems(item: Items) {
+    this.itemEmitter.emit(item);
   }
 }

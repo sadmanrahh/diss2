@@ -1,7 +1,6 @@
-
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { Pokemon } from '../../interfaces/seller.interface';
+import { Items } from '../../interfaces/seller.interface';
 import { orderBy } from '@firebase/firestore';
 @Component({
   selector: 'app-detail',
@@ -9,19 +8,20 @@ import { orderBy } from '@firebase/firestore';
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-  @Input() pokemon: Pokemon;
-  @Output() updatePokemon = new EventEmitter<void>();
-  @Output() deletePokemon = new EventEmitter<void>();
+  @Input() item: Items;
+  @Output() updateItems = new EventEmitter<void>();
+  @Output() deleteItems = new EventEmitter<void>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   update() {
-    this.updatePokemon.emit(), orderBy('type', 'asc');
+    this.updateItems.emit(), orderBy('type', 'asc');;
   }
- 
+
   delete() {
-    this.deletePokemon.emit();
+    this.deleteItems.emit();
   }
 }
+

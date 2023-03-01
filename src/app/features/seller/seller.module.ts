@@ -6,14 +6,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { NgModule } from '@angular/core';
-import { PokemonComponent } from './seller.component';
+import { ItemsComponent } from './seller.component';
 import { PokemonRoutingModule } from './seller-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
-  declarations: [PokemonComponent, FormComponent, ListComponent, DetailComponent],
+  declarations: [ItemsComponent, FormComponent, ListComponent, DetailComponent],
   providers: [], 
   imports: [
     CommonModule,
