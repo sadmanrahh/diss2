@@ -26,6 +26,7 @@ export class FormComponent implements OnInit {
     this.form = this.formBuilder.group({
       name: [this.item.name, [Validators.required]],
       type: [this.item.type, [Validators.required]],
+      contact: [this.item.contact, [Validators.required]],
       description: [this.item.description, [Validators.required]],
       height: [this.item.height, [Validators.required]],
       weight: [this.item.weight, [Validators.required]],
