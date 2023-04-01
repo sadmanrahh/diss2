@@ -15,9 +15,8 @@
         Contact Number: {{ item.contact }}
         
       </p>
-      <p>Buy: {{ item.weight }}</p>
+      <p> <button (click)="goToWeightLink(item.weight.toString())" class="nav-btn2">Buy</button></p>
      
-      <h2>Use the above link or call to book now!</h2>
         
      
     </div>

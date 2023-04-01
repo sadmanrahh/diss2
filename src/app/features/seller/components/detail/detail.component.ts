@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { Items } from '../../interfaces/seller.interface';
 import { orderBy } from '@firebase/firestore';
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -17,11 +18,14 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {}
 
   update() {
-    this.updateItems.emit(), orderBy('type', 'asc');;
+    this.updateItems.emit(), orderBy('type', 'asc');
   }
 
   delete() {
     this.deleteItems.emit();
   }
-}
 
+  goToWeightLink(link: string) {
+    window.location.href = link;
+  }
+}
