@@ -12,7 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ItemsComponent, FormComponent, ListComponent, DetailComponent],
@@ -26,7 +26,7 @@ import { DetailComponent } from './components/detail/detail.component';
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
-    
+    FormsModule
     
   ],
 })

@@ -18,29 +18,29 @@ import { Items } from '../features/seller/interfaces/seller.interface';
   providedIn: 'root',
 })
 export class SellFirestoreService {
-  private itemsCollection: CollectionReference<DocumentData>;
+  private itemsCollection: CollectionReference<DocumentData>;   
 
-  constructor(private readonly firestore: Firestore) {
-    this.itemsCollection = collection(this.firestore, 'items');
+  constructor(private readonly firestore: Firestore) {    
+    this.itemsCollection = collection(this.firestore, 'items');        
   }
 
-  getAll() {
+  getAll() {      
     return collectionData(this.itemsCollection, {
       idField: 'id',
     }) as Observable<Items[]>;
   }
 
-  get(id: string) {
+  get(id: string) {        
     const itemsDocumentReference = doc(this.firestore, `items/${id}`);
     return docData(itemsDocumentReference, { idField: 'id' });
     
   }
 
-  create(items: Items) {
+  create(items: Items) {     
     return addDoc(this.itemsCollection, items);
   }
 
-  update(items: Items) {
+  update(items: Items) {     
     const itemsDocumentReference = doc(
       this.firestore,
       `items/${items.id}`
@@ -48,7 +48,7 @@ export class SellFirestoreService {
     return updateDoc(itemsDocumentReference, { ...items });
   }
 
-  delete(id: string) {
+  delete(id: string) {         
     const itemsDocumentReference = doc(this.firestore, `items/${id}`);
     return deleteDoc(itemsDocumentReference);
   }

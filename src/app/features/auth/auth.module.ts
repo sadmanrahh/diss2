@@ -19,9 +19,10 @@ import { PremiumComponent } from './pages/premium/premium.component';
 import { CharitiesComponent } from './pages/charities/charities.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { TermsadminComponent } from './pages/termsadmin/termsadmin.component';
+import { LocationsComponent } from './pages/locations/locations.component';
 
 @NgModule({
-  declarations: [LoginPageComponent, LoginFormComponent, AdminpageComponent, ContactComponent, AboutComponent, UsageComponent, UsageadminComponent, ContactadminComponent, BecomeadminComponent, AboutadminComponent, PremiumComponent, CharitiesComponent, TermsComponent, TermsadminComponent],
+  declarations: [LoginPageComponent, LoginFormComponent, AdminpageComponent, ContactComponent, AboutComponent, UsageComponent, UsageadminComponent, ContactadminComponent, BecomeadminComponent, AboutadminComponent, PremiumComponent, CharitiesComponent, TermsComponent, TermsadminComponent, LocationsComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,

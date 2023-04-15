@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple locations map</title>
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Create a map object and specify the center and zoom level
+        var map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 51.518703, lng: -0.146850 },
+          zoom: 14,
+        });
+
+        // Add a marker for the first location
+        var marker1 = new google.maps.Marker({
+          position: { lat: 51.516252579636486, lng: -0.15249468418494894 },
+          map: map,
+          title: "Sourced Market",
+        });
+
+        // Add a marker for the second location
+        var marker2 = new google.maps.Marker({
+          position: { lat: 51.52015354676912, lng: -0.1393997144837797 },
+          map: map,
+          title: "Sourced Market - Barbican",
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqwI-2foIF6ovnyFO69LiAsIjseM2QvCc&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>

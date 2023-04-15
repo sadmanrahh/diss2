@@ -16,13 +16,6 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  update() {
-    this.updateItems.emit(), orderBy('type', 'asc');
-  }
-
-  delete() {
-    this.deleteItems.emit();
-  }
 
   goToWeightLink(link: string) {
     window.location.href = link;

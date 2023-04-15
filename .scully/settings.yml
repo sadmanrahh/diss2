@@ -1,0 +1,10 @@
+identifier: l1f2y94bsbw0dfq0
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: diss2
+homeFolder: /Users/sadman/diss2
+distFolder: dist/diss2
+outDir: /Users/sadman/diss2/dist/static/
+handle404: ''

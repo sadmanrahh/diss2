@@ -18,8 +18,9 @@
             
             <div class="nav">
                 <ul>
-                    
-                    <a href="/dashboard" class="nav-btn">Dashboard</a>
+                    <a href="/dashboard" >
+                      <button class="nav-btn">Home</button>
+                      </a>
                 </ul>
                 
             </div>
@@ -29,6 +30,17 @@
             <img src="assets/restaurantimg.png" alt="">
         </div>
     
+
+        <h1>LNW</h1>
+        <a href="/usage" >
+          <button class="nav-btn">How to Use</button>
+          </a>
+          <br>
+      
+                <label style="color: black;font-weight: 500;" for="name-show">Food Name:</label>
+                <input type="text" [(ngModel)]="searchQuery" placeholder="Search...">
+                <button class="nav-btn" (click)="searchItems()">Search</button>
+
         <div class="container">
         
             <div class="content">

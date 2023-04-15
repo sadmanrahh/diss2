@@ -15,6 +15,7 @@ import { FirebaseCrudadminComponent } from './firebase-crudadmin/firebase-crudad
 import { AboutadminComponent } from './features/auth/pages/aboutadmin/aboutadmin.component';
 import { TermsComponent } from './features/auth/pages/terms/terms.component';
 import { TermsadminComponent } from './features/auth/pages/termsadmin/termsadmin.component';
+import { LocationsComponent } from './features/auth/pages/locations/locations.component';
 const routes: Routes = [
   {
     path: '',
@@ -115,6 +116,11 @@ const routes: Routes = [
   {
     path:'charityadmin',
     component :FirebaseCrudadminComponent
+
+  },
+  {
+    path:'locations',
+    component :LocationsComponent
 
   },
   {

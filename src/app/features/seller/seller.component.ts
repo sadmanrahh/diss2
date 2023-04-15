@@ -17,6 +17,7 @@ export class ItemsComponent implements OnInit {
   allItems$: Observable<Items[]>;
   selectedItems?: Items;
   destroyed$ = new Subject<void>();
+  searchQuery = '';
 
   constructor(
     private readonly SellService: SellFirestoreService,
@@ -25,9 +26,10 @@ export class ItemsComponent implements OnInit {
 
   ngOnInit(): void {
     this.allItems$ = this.SellService.getAll().pipe(
-      map(items => [...(items || [])].sort((a, b) => a.type.localeCompare(b.type)))
-      );
-    }
+      map(items => [...(items || [])].sort((a, b) => a.type.localeCompare(b.type))),
+      map(items => items.filter(item => item.name.toLowerCase().includes(this.searchQuery.toLowerCase())))
+    );
+  }
 
   addItems() {
     const dialogRef = this.dialog.open(FormComponent, {
@@ -74,5 +76,12 @@ export class ItemsComponent implements OnInit {
 
   ngOnDestroy() {
     this.destroyed$.next();
+  }
+
+  searchItems() {
+    this.allItems$ = this.SellService.getAll().pipe(
+      map(items => [...(items || [])].sort((a, b) => a.type.localeCompare(b.type))),
+      map(items => items.filter(item => item.name.toLowerCase().includes(this.searchQuery.toLowerCase())))
+    );
   }
 }

@@ -11,6 +11,8 @@ import { PokemonRoutingModule } from './seller-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [ItemsComponent, FormComponent, ListComponent, DetailComponent],
@@ -24,6 +26,8 @@ import { DetailComponent } from './components/detail/detail.component';
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
+    FormsModule,
+    MatSelectModule
   ],
 })
 export class PokemonModule {}

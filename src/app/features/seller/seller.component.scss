@@ -1000,11 +1000,7 @@ li a:hover{
 h1{
     text-align:center;
 }
-input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
+
 .accordion-wrapper {
     border-radius: 8px;
     overflow: hidden;
@@ -1308,3 +1304,31 @@ img {
 	}
   
   }
+
+
+
+
+
+
+
+
+  input[type="text"] {
+	padding: 8px 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	box-shadow: none;
+  }
+  
+  input[type="text"]:focus {
+	outline: none;
+	border-color: #0066ff;
+	box-shadow: 0 0 5px #0066ff;
+  }
+
+
+
+
+
+
+  
