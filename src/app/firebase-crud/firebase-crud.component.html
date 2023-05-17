@@ -19,7 +19,7 @@
             <div class="nav">
                 <ul>
                     
-                    <a href="/dashboard" class="nav-btn">Home</a>
+                    <a href="/uY2uXw8ftjNkOTV6kHdHuKNZbyu8wfwaXitWeU1KMMbmHkYQzsEquExC7QjIWy6pGoPyO6f7wdNsEfMx" class="nav-btn">Home</a>
                 </ul>
                 
             </div>
@@ -43,39 +43,39 @@
         <div class="list-header">          
 
         </div>
-
+        <a href="/QDxOoRhVQ6SOjyYewCVPnzeJFBtJ4Qkyze7XjMN9Axx0w7mgvkUookr2m1zBPA1yKIgSP4sXvm53LUjv" >
+          <button class="nav-btn">How to Use</button>
+          </a>
 <br><br> 
 
 <form class="add">
-    
-    <label style="color: teal;font-weight: 500;" for="name" > Collector Name & Store you want to collect it from:</label>
-    <input type="text" name="name" required [(ngModel)]="CharityDetails.name" />
+  <label style="color: teal;font-weight: 500;" for="name">Collector Name & Store you want to collect it from:</label>
+  <input type="text" name="name" required [(ngModel)]="CharityDetails.name" class="form-input" />
 
-
-    <button  mat-button type="submit"(click)="add()">Submit</button>
+  <button mat-button type="submit" (click)="add()">Submit</button>
 </form>
-<br>
-<br>
+
+<br><br>
 
 <div class="list-header">
-<h2>Request List</h2>
+  <h2>Request List</h2>
 </div>
 
 <div class="show">
-    <ng-container *ngFor="let request of CharityCollectiondata">
-        <div>
-            <label style="color: teal;font-weight: 500;" for="name-show">Collector Name & Store Requested collection from:</label>
-            
-            <input type="text" name="name-show" [value]="request.name" required #name>
+  <ng-container *ngFor="let request of CharityCollectiondata">
+    <div>
+      <label for="name-show">Collector Name & Store Requested collection from:</label>
+      <input type="text" name="name-show" [value]="request.name" required #name class="form-input">
 
-            <label style="color: teal;font-weight: 500;" for="status-show">Status:</label>
-            <input type="text" name="status-show" [value]="request.status" required #status>
-
-         
-        </div>
-        <br>
-    </ng-container>
+      <label for="status-show">Status:</label>
+      <input type="text" name="status-show" [value]="request.status" required #status class="form-input">
+    </div>
+    <br>
+  </ng-container>
 </div>
+
+
+
 
 
 <img src="assets/faq.png" alt="Cinque Terre" width="1500" height="200">
@@ -132,13 +132,12 @@
     <p class="footer-links">
     
       
-      <a href="/dashboard">Home</a>
-       <a href="/user">Order </a>
-       <a href="/about">About</a>
-      <a href="/contact">Contact </a>
-       <a href="/charity">Charities</a>
-       <a href="/usage">Usage </a>
-      <a href="/becomeadmin">Register</a>
+      <a href="/uY2uXw8ftjNkOTV6kHdHuKNZbyu8wfwaXitWeU1KMMbmHkYQzsEquExC7QjIWy6pGoPyO6f7wdNsEfMx">Home</a>
+             <a href="/RgUbQYECrZ62tTdDZr98MMgwjh1Lufgsgg9aqpmNipjGiBFbmdUu1vNZNwyintkzJgi09Q031nocEwWh">Order </a>
+             <a href="/0AfYCzWLOmqhipC12PPHtjRtoPOjDDUMm0iMPn7hUS8wkVA9gaw9anv7qGiAz6vGXuHmhGaJRM369BRj">About</a>
+            <a href="/aOe19zmkSvjAyU3f8U3iH2erDlBRpIpnwOZhmOEMsG4AUGlhSefDkiKngsZU45MEBExdHRiAM1Kog72A">Contact </a>
+           <a href="/i4Atw8mkktOyaJMlo0q8B5mwPFIOT8ixhn4sSjkLXxz25RnQeXryOPOOY030b6nvl9FdO7y1jZhGMY28">Charities</a>
+            <a href="/AMGRyXCRHHETqsQujcDqZzER45P7iIXV8PKEkwSBhkLFgYk883hJQTGUMfoNDsIO6420qc8kNFJSqBHI">Register</a>
     </p>
 
     <p class="footer-company-name">LetsNotWaste © 2023</p>

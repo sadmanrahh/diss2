@@ -1325,3 +1325,33 @@ button {
 
 
   
+
+
+
+
+
+  .form-input {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 5px;
+	font-size: 16px;
+  }
+  
+  .updatebutton {
+	background-color: green;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 3px;
+	cursor: pointer;
+  }
+  
+  .dltbutton {
+	background-color: red;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 3px;
+	cursor: pointer;
+  }
+  

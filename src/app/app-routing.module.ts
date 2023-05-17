@@ -23,103 +23,103 @@ const routes: Routes = [
       import('./features/auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'dashboard',
+    path: 'uY2uXw8ftjNkOTV6kHdHuKNZbyu8wfwaXitWeU1KMMbmHkYQzsEquExC7QjIWy6pGoPyO6f7wdNsEfMx',
     loadChildren: () =>
       import('./features/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
       ),
   },
   {
-    path: 'order',
+    path: '1M8Bd6cy9LVVzCZ7pFfQM00PQVkkNvZC198Nd8wP8ymmEhHmdAiTWzk2Y4BfXR7L1AnVo5zPuxXyBgVl',
     loadChildren: () =>
       import('./features/seller/seller.module').then((m) => m.PokemonModule),
   },
   {
-    path:'adminpage',
+    path:'ww4IagYGx0K3eUPcys7Ibf6yq9K32I67N3Q4rmbj6GXqtUj0CGnICQR1cSN3ZDeELbez5xRrHKaAyJLm',
     component :AdminpageComponent
     
   }, 
   { 
-    path: 'user', 
+    path: 'RgUbQYECrZ62tTdDZr98MMgwjh1Lufgsgg9aqpmNipjGiBFbmdUu1vNZNwyintkzJgi09Q031nocEwWh', 
   loadChildren: () => 
   import('./features/user/user.module').then(m => m.UserModule) },
   
  
   {
-    path:'contact',
+    path:'aOe19zmkSvjAyU3f8U3iH2erDlBRpIpnwOZhmOEMsG4AUGlhSefDkiKngsZU45MEBExdHRiAM1Kog72A',
     component :ContactComponent
     
   },
   
   {
-    path:'contactadmin',
+    path:'vg6jh2vI5sXIPKcxmhEisMS5ZRFvzklYmNQyb8bZc7ITAkSC3W3dRwTcGJdD6vDwAG4Kk6PAuwbVTKFP',
     component :ContactadminComponent
     
   },
 
   {
-    path:'terms',
+    path:'QnkieA1qkyywixiXxItllqUoU54qMaTnejSsZneMiuenIt3Eh7MY4E0kpQ2ULDYniOZVVo8gf67uMNZ4',
     component :TermsComponent
     
   },
 
   {
-    path:'termsadmin',
+    path:'iiuTbq5pcmpv91BdwBs8ndk8NTonLYfN8CxI60nNnkq4ac7pndjZTzCLfwW4xlkT8y56fRRjRnvgbUDX',
     component :TermsadminComponent
     
   },
 
   {
-    path:'becomeadmin',
+    path:'AMGRyXCRHHETqsQujcDqZzER45P7iIXV8PKEkwSBhkLFgYk883hJQTGUMfoNDsIO6420qc8kNFJSqBHI',
     component :BecomeadminComponent
     
   },
   
   {
-    path:'about',
+    path:'0AfYCzWLOmqhipC12PPHtjRtoPOjDDUMm0iMPn7hUS8wkVA9gaw9anv7qGiAz6vGXuHmhGaJRM369BRj',
     component :AboutComponent
     
   },
   {
-    path:'aboutadmin',
+    path:'BXlqaHvEr76RuGT7FN0BQWhpIjJ4j6AWqllzzGMNZd17gkeDRAi5czFLHWf9ZDxsr8ZQcMXJ7zPXCFwd',
     component :AboutadminComponent
     
   },
   
   {
-    path:'usage',
+    path:'QDxOoRhVQ6SOjyYewCVPnzeJFBtJ4Qkyze7XjMN9Axx0w7mgvkUookr2m1zBPA1yKIgSP4sXvm53LUjv',
     component :UsageComponent
 
   },
 
   {
-    path:'usageadmin',
+    path:'1gAPDaBNtEzC24zwchFGxLi5xgjFZMBVhH3yJo9ZB5VUocqxnhJsBwD319EgPn3NyOkEFxNNn2QIy64l',
     component :UsageadminComponent
 
   },
   {
-    path:'premium',
+    path:'t59eGGRrISAqhtjXoGZ3VMk9ZkbPQAq6WT00bb2FciXRawR83WaIO7npIBe6xLPg1CzBKsDGby0X0fxD',
     component :PremiumComponent
 
   },
   {
-    path:'charities',
+    path:'Eg1Yt3VyPHEqWR3BCOpqIvoEMuT1mTPiFmmnrkRa3GapsEL0xg5gkpuo7LUIEpd7guO44PMeJLvnbjaQ',
     component :CharitiesComponent
 
   },
-  { path: 'char', loadChildren: () => import('./features/char/char.module').then(m => m.CharModule) },
+  { path: 'g5S0AApOWHQGotjDdSyCbFNIjA6wXtt6qMVGbngWZtqR6UlnFSlqhtzhBRJEd2cDVEXqXzjI8arfNl1X', loadChildren: () => import('./features/char/char.module').then(m => m.CharModule) },
   {
-    path:'charity',
+    path:'i4Atw8mkktOyaJMlo0q8B5mwPFIOT8ixhn4sSjkLXxz25RnQeXryOPOOY030b6nvl9FdO7y1jZhGMY28',
     component :FirebaseCrudComponent
 
   },
   {
-    path:'charityadmin',
+    path:'64RMA74lW3T8RJM5ABkIuLn89Z23DY9XxsVVOTOTMs1fHE83r6ttI36BhfN4dzUYE7JbgQd4AB8mJB4y',
     component :FirebaseCrudadminComponent
 
   },
   {
-    path:'locations',
+    path:'la5Bn0nQn7eqrsXnVnBGSBlEVEq3onMXXDExUNh5QRjPUsUGiuHR0hdekuAFEkAU4OVZYfoqJnhbQu3K',
     component :LocationsComponent
 
   },
