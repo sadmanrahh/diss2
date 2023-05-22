@@ -49,7 +49,7 @@
 <br><br> 
 
 <form class="add">
-  <label style="color: teal;font-weight: 500;" for="name">Collector Name & Store you want to collect it from:</label>
+  <label style="color: teal;font-weight: 500;" for="name">Charity Name & Store you want to collect it from:</label>
   <input type="text" name="name" required [(ngModel)]="CharityDetails.name" class="form-input" />
 
   <button mat-button type="submit" (click)="add()">Submit</button>
@@ -64,7 +64,7 @@
 <div class="show">
   <ng-container *ngFor="let request of CharityCollectiondata">
     <div>
-      <label for="name-show">Collector Name & Store Requested collection from:</label>
+      <label for="name-show">Charity Name & Store Requested collection from:</label>
       <input type="text" name="name-show" [value]="request.name" required #name class="form-input">
 
       <label for="status-show">Status:</label>
